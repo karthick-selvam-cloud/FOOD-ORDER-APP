@@ -1,0 +1,599 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff5252;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-secondary:hover {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+/* Login Section */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.login-box {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.login-box h1 {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login-box p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.login-form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff6b6b;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #999;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+.terms {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+/* App Section */
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left h1 {
+    color: #ff6b6b;
+    font-size: 24px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.location i {
+    margin-right: 5px;
+    color: #ff6b6b;
+}
+
+.btn-cart {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+}
+
+.btn-cart span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #333;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-box i {
+    color: #999;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+.categories-container {
+    padding: 20px;
+}
+
+.categories-container h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.categories {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #f5f5f5;
+}
+
+.category i {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.category span {
+    font-size: 12px;
+    color: #666;
+}
+
+.category.active {
+    background-color: #ff6b6b;
+}
+
+.category.active i, .category.active span {
+    color: white;
+}
+
+.restaurants-container {
+    padding: 0 20px 20px;
+}
+
+.restaurants-container h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.restaurants {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.restaurant-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    padding: 12px;
+}
+
+.restaurant-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurant-cuisine {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.restaurant-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-rating {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+}
+
+.restaurant-rating i {
+    color: #ffcc00;
+    margin-right: 3px;
+    font-size: 14px;
+}
+
+.restaurant-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff6b6b;
+}
+
+.add-to-cart {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #ff5252;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: modalOpen 0.3s;
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 20px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+}
+
+.cart-total, .checkout-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-checkout {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-checkout:hover {
+    background-color: #ff5252;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 30px 0;
+    color: #999;
+}
+
+.empty-cart i {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: #ff6b6b;
+    font-size: 14px;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-quantity {
+    font-weight: 600;
+}
+
+.cart-item-remove {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 15px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.checkout-form input, 
+.checkout-form textarea, 
+.checkout-form select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.checkout-form textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.confirmation {
+    text-align: center;
+    padding: 30px;
+}
+
+.confirmation-icon {
+    font-size: 60px;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.confirmation h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.confirmation p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .restaurants {
+        grid-template-columns: 1fr;
+    }
+    
+    .login-box {
+        padding: 20px;
+    }
+    
+    .app-header {
+        padding: 10px 15px;
+    }
+    
+    .categories-container, 
+    .restaurants-container {
+        padding: 15px;
+    }
+}
